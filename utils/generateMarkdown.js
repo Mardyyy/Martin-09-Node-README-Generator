@@ -17,4 +17,10 @@ function generateMarkdown(data) {
 `;
 }
 
+module.exports = renderLicenseBadge;
+
+module.exports = renderLicenseLink;
+
+module.exports = renderLicenseSection;
+
 module.exports = generateMarkdown;

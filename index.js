@@ -1,19 +1,23 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const renderLicenseBadge = require('./utils/generateMarkdown');
+const renderLicenseLink = require('./utils/generateMarkdown');
+const renderLicenseSection = require('./utils/generateMarkdown');
 const generateMarkdown = require('./utils/generateMarkdown');
+
 // TODO: Create an array of questions for user input
-const questions = [];
+// const questions = [];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) { }
+// function writeToFile(fileName, data) { }
 
 // TODO: Create a function to initialize app
-function init() { }
+// function init() { }
 
 
 // Function call to initialize app
-init();
+// init();
 
 // ------------
 inquirer
@@ -44,8 +48,9 @@ inquirer
             name: 'credits',
         },
         {
-            type: 'input',
+            type: 'list',
             message: 'What license do you want?',
+            choices: ['None', 'Apache License 2.0', 'GNU General Public License v3.0', 'MIT License'],
             name: 'license',
         },
         {
@@ -70,12 +75,11 @@ inquirer
     # ${response.title}
 
     ## Description
+    
     ${response.description}
 
-    ## Table of Contents (Optional)
+    ## Table of Contents 
 
-    If your README is long, add a table of contents to make it easy for users to find what they need.
-    
     - [Description](#description)
     - [Installation](#installation)
     - [Usage](#usage)
@@ -102,10 +106,6 @@ inquirer
 
     ## Badges
 
-    ![badmath](https://img.shields.io/github/languages/top/lernantino/badmath)
-
-    Badges aren't necessary, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
-
     ## Tests
 
     ${response.tests}
@@ -115,6 +115,7 @@ inquirer
     For any additional questions, reach me at ${response.email} or https://github.com/${response.username}.
 
     `
+
     , (err) =>
         err ? console.error(err) : console.log('Success!')
     );
