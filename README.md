@@ -25,7 +25,7 @@ To run the project, you must first install "inquirer. This can be done by enteri
 ## Credits
 
 Starter Code:
-<a href="https://github.com/coding-boot-camp/potential-enigma"></a>
+<a href="https://github.com/coding-boot-camp/potential-enigma">Starter Code Source</a>
 
 ## License
 
@@ -36,6 +36,6 @@ None
     
 ## Questions
 
-For any additional questions, reach me at <a href="martinapopot@gmail.com"></a> or <a href="https://github.com/mardyyy"></a>.
+For any additional questions, reach me at <a href="martinapopot@gmail.com">My email</a> or <a href="https://github.com/mardyyy">My github</a>.
 
     
