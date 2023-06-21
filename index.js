@@ -72,6 +72,7 @@ inquirer
     .then((response) => {
         fs.writeFile('README.md',
         `# ${response.title}
+        
         ## Description
 
         ${response.description}
@@ -110,7 +111,7 @@ inquirer
     
         ## Questions
 
-        For any additional questions, reach me at ${response.email} or https://github.com/${response.username}.`
+        For any additional questions, reach me at <a href="${response.email}"></a> or <a href="https://github.com/${response.username}"></a>.`
 
         , (err) =>
         err ? console.error(err) : console.log('Success!')
