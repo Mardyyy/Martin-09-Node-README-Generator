@@ -71,52 +71,48 @@ inquirer
     ])
     .then((response) => {
         fs.writeFile('README.md',
-    `
-    # ${response.title}
+        `# ${response.title}
+        ## Description
 
-    ## Description
+        ${response.description}
+
+        ## Table of Contents 
+
+        - [Description](#description)
+        - [Installation](#installation)
+        - [Usage](#usage)
+        - [Credits](#credits)
+        - [License](#license)
+        - [Tests](#tests)
+        - [Questions](#questions)
+
+        ## Installation
+
+        ${response.instructions}
+
+        ## Usage
+
+        ${response.usage}
+
+        ## Credits
+
+        ${response.credits}
+
+        ## License
+
+        ${response.license}
+
+        ## Badges
+
+        ## Tests
+
+        ${response.tests}
     
-    ${response.description}
+        ## Questions
 
-    ## Table of Contents 
+        For any additional questions, reach me at ${response.email} or https://github.com/${response.username}.`
 
-    - [Description](#description)
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [Credits](#credits)
-    - [License](#license)
-    - [Tests](#tests)
-    - [Questions](#questions)
-
-    ## Installation
-
-    ${response.instructions}
-
-    ## Usage
-
-    ${response.usage}
-
-    ## Credits
-
-    ${response.credits}
-
-    ## License
-
-    ${response.license}
-
-    ## Badges
-
-    ## Tests
-
-    ${response.tests}
-    
-    ## Questions
-
-    For any additional questions, reach me at ${response.email} or https://github.com/${response.username}.
-
-    `
-
-    , (err) =>
+        , (err) =>
         err ? console.error(err) : console.log('Success!')
-    );
+        );
     });
